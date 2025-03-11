@@ -53,7 +53,7 @@ jobs:
       - name: path    
         with:
           name: path
-          run: echo ${{ env.TF_WORKING_DIR }}/terraform.tfstate        
+          run: echo "${{ env.TF_WORKING_DIR }}/terraform.tfstate"
 
       - name: Salvar Estado Terraform
         uses: actions/upload-artifact@v4
