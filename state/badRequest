@@ -1,0 +1,8 @@
+{
+    "timestamp": 1581512146783,
+    "status": 400,
+    "error": "Bad Request",
+    "exception": "br.com.equatorialenergia.inspecao.exception.NegocioException",
+    "message": "Unrecognized field \"nroInspecao\" (class br.com.equatorialenergia.inspecao.core.dto.HorarioDTO), not marked as ignorable (4 known properties: \"chegadaBase\", \"saidaBase\", \"chegadaInspecao\", \"saidaInspecao\"])\n at [Source: [    {\t\n\t    \"nroInspecao\" : 1,\n        \"saidaBase\": \"2020-02-12 08:00:00\",\n        \"chegadaInspecao\":  \"2020-02-12 08:30:00\",\n        \"saidaInspecao\":  \"2020-02-12 17:00:00\",\n        \"chegadaBase\":  \"2020-02-12 17:30:00\"\n    },\n    {\n\t     \"nroInspecao\" : 2,\n        \"saidaBase\": \"2020-02-12 08:00:00\",\n        \"chegadaInspecao\":  \"2020-02-12 08:30:00\",\n        \"saidaInspecao\":  \"2020-02-12 17:00:00\",\n        \"chegadaBase\":  \"2020-02-12 17:30:00\"\n    }\n]\n; line: 2, column: 23] (through reference chain: java.lang.Object[][0]->br.com.equatorialenergia.inspecao.core.dto.HorarioDTO[\"nroInspecao\"])",
+    "path": "/inspecao/api/mobile/saveInspection"
+}
