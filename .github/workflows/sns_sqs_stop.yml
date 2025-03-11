@@ -45,7 +45,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: terraform-state
-          path: sns_sqs/terraform.tfstate    
+          path: sns_sqs/
 
 
 #      - name: Terraform Init
