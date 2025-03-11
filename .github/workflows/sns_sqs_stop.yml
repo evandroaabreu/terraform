@@ -35,8 +35,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-       
-      - name: Terraform Destroy (only on main)
-        if: github.ref == 'refs/heads/main'
+
+      - name: Terraform Init
         working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform destroy -auto-approve
+        run: terraform init
+
+      - name: Terraform Destroy
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: terraform destroy -auto-approve      
