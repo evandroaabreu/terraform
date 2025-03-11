@@ -50,6 +50,9 @@ jobs:
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: terraform apply -auto-approve tfplan
 
+      - name: Verificar existência do arquivo Terraform State
+        run: ls -lah
+
       - name: Salvar Estado Terraform
         uses: actions/upload-artifact@v4
         with:
