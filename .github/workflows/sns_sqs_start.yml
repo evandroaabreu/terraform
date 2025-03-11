@@ -1,4 +1,4 @@
-name: Terraform Pipeline
+name: Terraform sns_sqs_start
 
 on:
   push:
