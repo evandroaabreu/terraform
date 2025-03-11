@@ -1,7 +1,9 @@
 name: Terraform sns_sqs_stop
 
 on:
-  push:
+ workflow_dispatch:
+
+  #push:
    # branches:
     #  - main
      # - develop
