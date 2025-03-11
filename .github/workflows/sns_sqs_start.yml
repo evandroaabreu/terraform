@@ -49,7 +49,7 @@ jobs:
         with:
           name: terraform-state
           #path:  ${{ env.TF_WORKING_DIR }}/terraform.tfstate
-          path:  state/terraform.tfstate          
+          path:  sns_sqs/terraform.tfstate          
 
       - name: Buscar arquivo terraform.tfstate
         run: find . -name "terraform.tfstate"          
