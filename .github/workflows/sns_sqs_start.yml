@@ -9,7 +9,8 @@ on:
       
 
 env:
-  TF_VERSION: "1.6.0"
+  #TF_VERSION: "1.6.0"
+  TF_VERSION: "1.7.5"
   AWS_REGION: "us-east-1"
   TF_WORKING_DIR: "./sns_sqs"
 
@@ -58,7 +59,7 @@ jobs:
         with:
           name: terraform-state
           #path:  ${{ env.TF_WORKING_DIR }}/terraform.tfstate
-          path:  state/terraform.tfstate
+          path:  state/terraform.tfstate          
 
       - name: Buscar arquivo terraform.tfstate
         run: find . -name "terraform.tfstate"          
