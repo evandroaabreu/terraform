@@ -12,6 +12,7 @@ env:
   TF_VERSION: "1.6.0"
   AWS_REGION: "us-east-1"
   TF_WORKING_DIR: "./sns_sqs"
+  teste: ${{ env.TF_WORKING_DIR }}/terraform.tfstate
 
 jobs:
   terraform:
@@ -53,7 +54,7 @@ jobs:
       - name: path    
         with:
           name: path
-          run: echo "${{ env.TF_WORKING_DIR }}/terraform.tfstate"
+          run: echo  ${{ env.teste}}
 
       - name: Salvar Estado Terraform
         uses: actions/upload-artifact@v4
