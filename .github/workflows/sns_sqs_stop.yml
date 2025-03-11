@@ -36,9 +36,9 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
 
-      - name: Terraform Init
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform init
+     # - name: Terraform Init
+      #  working-directory: ${{ env.TF_WORKING_DIR }}
+      #  run: terraform init
 
       - name: Terraform Destroy
         working-directory: ${{ env.TF_WORKING_DIR }}
