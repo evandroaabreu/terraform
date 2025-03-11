@@ -1,7 +1,8 @@
 name: Terraform sns_sqs_start
 
 on:
- push:
+ workflow_dispatch:
+ #push:
   #  branches:
    #   - main
     #  - develop
