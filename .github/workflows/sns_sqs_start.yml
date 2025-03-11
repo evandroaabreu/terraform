@@ -1,7 +1,7 @@
 name: Terraform sns_sqs_start
 
-#on:
- # push:
+on:
+ push:
   #  branches:
    #   - main
     #  - develop
