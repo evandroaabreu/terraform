@@ -38,18 +38,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Terraform Init
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform init    
-
-      - name: Terraform Plan
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform plan -out=tfplan
-        
-      - name: Terraform Apply (only on main)
-        if: github.ref == 'refs/heads/main'
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform apply -auto-approve tfplan
+      - name: Gerar Terraform
+        run: cd sns_sqs && terraform init && terraform apply -auto-approve  tfplan
 
       - name: Verificar existência do arquivo Terraform State
         run: ls -lah
