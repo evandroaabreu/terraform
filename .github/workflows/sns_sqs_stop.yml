@@ -9,7 +9,8 @@ on:
      # - develop
 
 env:
-  TF_VERSION: "1.6.0"
+  #TF_VERSION: "1.6.0"
+  TF_VERSION: "1.7.5"
   AWS_REGION: "us-east-1"
   TF_WORKING_DIR: "./sns_sqs"
 
@@ -47,11 +48,11 @@ jobs:
           path: sns_sqs/terraform.tfstate    
 
 
-      - name: Terraform Init
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform init
+#      - name: Terraform Init
+#        working-directory: ${{ env.TF_WORKING_DIR }}
+#        run: terraform init
 
-      - name: Terraform Destroy
-        working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform destroy -auto-approve      
+ #     - name: Terraform Destroy
+ #       working-directory: ${{ env.TF_WORKING_DIR }}
+ #       run: terraform destroy -auto-approve      
  
