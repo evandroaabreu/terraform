@@ -1,0 +1,5 @@
+# Ignorar o arquivo de lock do Terraform
+.terraform.lock.hcl
+
+# Ignorar o diretório do Terraform
+.terraform/
