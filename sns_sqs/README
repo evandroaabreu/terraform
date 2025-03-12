@@ -1,0 +1,8 @@
+CD /aws_s3
+/aws_s3/ terraform init
+/aws_s3/ terraform plan
+/aws_s3/ terraform plan
+/aws_s3/ terraform apply
+
+
+*  tem que ter o mesmo nome "bucket = "my-terraform-state-ev""
