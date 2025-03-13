@@ -34,15 +34,15 @@ jobs:
           terraform_version: 1.5.0
 
       - name: Inicializar Terraform
-        run: cd sns_sqs/infra/ && terraform init
+        run: cd cd aws_sns_sqs//infra/ && terraform init
 
       - name: Validar Terraform
-        run: cd infra && terraform validate
+        run: cd aws_sns_sqs/infra && terraform validate
 
       - name: Executar Terraform Apply
         if: github.event.inputs.action == 'apply'
-        run: cd infra && terraform apply -auto-approve
+        run: cd cd aws_sns_sqs/infra && terraform apply -auto-approve
 
       - name: Executar Terraform Destroy
         if: github.event.inputs.action == 'destroy'
-        run: cd infra && terraform destroy -auto-approve
+        run: cd cd aws_sns_sqs/infra && terraform destroy -auto-approve
