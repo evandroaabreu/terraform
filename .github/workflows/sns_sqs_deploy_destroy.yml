@@ -39,7 +39,7 @@ jobs:
 
       - name: Validar Terraform
         working-directory: aws_sns_sqs/infra      
-        run: cd aws_sns_sqs/infra && terraform validate
+        run: terraform validate
 
       - name: Executar Terraform Apply
         working-directory: aws_sns_sqs/infra
