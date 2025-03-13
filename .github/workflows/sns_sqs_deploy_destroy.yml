@@ -34,7 +34,7 @@ jobs:
           terraform_version: 1.5.0
 
       - name: Inicializar Terraform
-        run: cd cd aws_sns_sqs//infra/ && terraform init
+        run: terraform init
 
       - name: Validar Terraform
         run: cd aws_sns_sqs/infra && terraform validate
