@@ -38,12 +38,15 @@ jobs:
         run: terraform init
 
       - name: Validar Terraform
+        working-directory: aws_sns_sqs/infra      
         run: cd aws_sns_sqs/infra && terraform validate
 
       - name: Executar Terraform Apply
+        working-directory: aws_sns_sqs/infra
         if: github.event.inputs.action == 'apply'
-        run: cd cd aws_sns_sqs/infra && terraform apply -auto-approve
+        run: terraform apply -auto-approve
 
       - name: Executar Terraform Destroy
+        working-directory: aws_sns_sqs/infra
         if: github.event.inputs.action == 'destroy'
-        run: cd cd aws_sns_sqs/infra && terraform destroy -auto-approve
+        run: terraform destroy -auto-approve
